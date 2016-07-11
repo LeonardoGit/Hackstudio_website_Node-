@@ -1,0 +1,41 @@
+<div id="login">
+<div class="small-12 grid-block">
+	<div class="grid-content text-center">
+		<img class="logo_icon" src="/images/icons/logo.png" alt="HACKSTUDIO" />
+		<h1>WELCOME BACK</h1>
+	</div>
+</div>
+<div class="small-12 grid-block align-center p-top">
+	<div class="small-3 grid-block">
+		<div class="small-12 grid-block">
+			<div class="grid-content">
+				<form id="loginForm" name="loginForm" novalidate>
+					<label>
+						Please sign in:
+						<input type="email" name="email_address" placeholder="E-Mail" ng-model="email_address" required>
+						<span style="color:red" ng-show="loginForm.email_address.$dirty && loginForm.email_address.$invalid">Email is required!</span>
+						<span style="color:red" ng-show="loginForm.email_address.$error.email">Invalid email address.</span>
+					</label>
+					<label>
+						<input type="password" name="password" placeholder="Password" ng-model="password" ng-enter="login()" required>
+						<span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid">
+						<span ng-show="loginForm.password.$error.required">Password is required</span></span>
+					</label>
+					<a class="expand secondary button" ng-click="login()" ng-disabled="loginForm.password.$dirty && loginForm.password.$invalid ||
+					loginForm.email_address.$dirty && loginForm.email_address.$invalid">Submit</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block align-center p-top">
+	<div class="small-3 grid-block">
+		<div class="small-12 grid-block">
+			<div class="grid-content">
+				<a class="m-left">Forgot username or password?</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+

@@ -1,0 +1,18 @@
+<div class="small-12 grid-block">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="datepicker2" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="holiday.holiday">
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap p-top">
+		<div class="small-12 grid-content">
+			<div class="small-12">
+				<a class="tiny button full" ng-click="add_holiday()">set</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-alert class="alert-box {{errpInfo.type}} radius" ng-show=" errpInfo.hasError">
+	{{ errpInfo.message }}
+	<a href="#" class="close">&times;</a>
+</div>

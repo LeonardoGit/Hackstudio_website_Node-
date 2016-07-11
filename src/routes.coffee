@@ -1,0 +1,74 @@
+foundationRoutes = [
+	{
+		"name":"settings",
+		"url":"/settings-this-is-cool",
+		"animationIn":"slideFromLeft",
+		"animationOut":"slideFromLeft",
+		"path":"templates/settings.html"
+	},
+	{
+		"name":"home",
+		"url":"/home",
+		"path":"templates/home.html"
+	}
+	,
+	{
+		"name":"login",
+		"url":"/login",
+		"path":"templates/login.html"
+	}
+,
+	{
+		"name":"signup",
+		"url":"/signup",
+		"path":"templates/signup.html"
+	}
+,
+	{
+		"name":"calender",
+		"url":"/admin/calendar",
+		"path":"templates/calendar.html"
+	}
+,
+	{
+		"name":"classes",
+		"url":"/classes",
+		"path":"templates/classes.html"
+	}
+,
+	{
+		"name":"staff",
+		"url":"/staff",
+		"path":"templates/staff.html"
+	}
+,
+	{
+		"name":"members",
+		"url":"/admin/members",
+		"path":"templates/families.html"
+	}
+,
+	{
+		"name":"billing",
+		"url":"/admin/billing",
+		"path":"templates/billing.html"
+	}
+,
+	{
+		"name":"report",
+		"url":"/admin/report",
+		"path":"templates/report.html"
+	}
+,
+	{
+		"name":"settings",
+		"url":"/admin/settings",
+		"path":"templates/settings.html"
+	}
+,
+	{
+		"name":"enrollment",
+		"url":"/admin/enrollment",
+		"path":"templates/enrollment.html"
+	}
+]

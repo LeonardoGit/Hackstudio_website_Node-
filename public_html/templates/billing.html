@@ -1,0 +1,517 @@
+<div id="members">
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/header.html'">
+            </div>
+        </div>
+    </div>
+    <div class="row grid-block p-top">
+        <div class="small-12 grid-block">
+            <div class="small-2 grid-block wrap menu_part">
+                <div class="small-12 grid-content">
+                    <div class="row" ng-include="'templates/billing/left_menu.html'">
+                    </div>
+                </div>
+            </div>
+            <div class="small-10 grid-block wrap">
+                <div class="row small-12">
+                    <div class="small-12 grid-block p-top">
+                        <div class="grid-content">
+                            <div zf-tabs="" class="">
+                                <div class="tab m-width" zf-tab="" title="Statements">
+                                    <div class="row">
+                                        <div class="small-12 grid-block align-right">
+                                            <div class="small-4 grid-content">
+                                                <input class="ico_search" placeholder="Search">
+                                            </div>
+                                        </div>
+                                        <div class="small-11 grid-block align-center p-top">
+                                            <div class="small-1 grid-block wrap p-top align-left">
+                                                <div class="small-12 grid-content">
+                                                    <span class="">Status:</span>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 grid-block wrap align-right">
+                                                <div class="small-10 grid-content">
+                                                    <a class="tiny button full">All</a>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 grid-block wrap align-right">
+                                                <div class="small-10 grid-content">
+                                                    <a class="tiny button full">Unpaid</a>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 grid-block wrap align-right">
+                                                <div class="small-10 grid-content">
+                                                    <a class="tiny button full">Negative</a>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 grid-block wrap align-right">
+                                                <div class="small-10 grid-content">
+                                                    <a class="tiny button full">paid</a>
+                                                </div>
+                                            </div>
+                                            <div class="small-5 grid-block wrap align-right p-top">
+                                                <div class="small-5 grid-content">
+                                                    <a class="tiny button full">Print</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-block align-center">
+                                                <div class="small-12 grid-content">
+                                                    <table class="txt_content div_border">
+                                                        <thead>
+                                                            <tr class="text-center">
+                                                                <th width="3%"></th>
+                                                                <th width="12%">Statement #</th>
+                                                                <th width="40%">Payee(Student First Names)</th>
+                                                                <th width="15%">Total Billed</th>
+                                                                <th width="15%">Payments Applied</th>
+                                                                <th width="15%">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="div_border">
+                                                                <td class="text-center"> <input type="checkbox" class="radio"></td>
+                                                                <td class="text-center">1234</td>
+                                                                <td class="text-center">Margie Smith (Samson,Mike)</td>
+                                                                <td class="text-center">$275</td>
+                                                                <td class="text-center">$200</td>
+                                                                <td class="text-center">Unpaid</td>
+                                                            </tr>
+                                                            <tr class="div_border">
+                                                                <td class="text-center"> <input type="checkbox" class="radio"></td>
+                                                                <td class="text-center">3245</td>
+                                                                <td class="text-center">Roger Dodger (Silas, Rose)</td>
+                                                                <td class="text-center">$1000</td>
+                                                                <td class="text-center">$1000</td>
+                                                                <td class="text-center">Paid</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab m-width" zf-tab="" title="Discounts">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-12 grid-content div_border">
+                                                <div class="small-11 grid-block p-m-top">
+                                                    <div class="small-2 grid-block wrap p-top align-left">
+                                                        <div class="small-12 grid-content m-left">
+                                                            <span class="m-left">Discounts</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-2 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <input type="radio" class="radio">
+                                                            <span class="txt-head">Active</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-2 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <input type="radio" class="radio">
+                                                            <span class="txt-head">All</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-2 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <a class="tiny button full" zf-open="modal_set_discount">Add New</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="small-12 grid-block align-center">
+                                                    <div class="small-12 grid-content p-m-bottom">
+                                                        <table class="txt_content div_border">
+                                                            <thead>
+                                                            <tr class="text-center">
+                                                                <th width="20%">Name</th>
+                                                                <th width="16%">Code</th>
+                                                                <th width="16%">Amount</th>
+                                                                <th width="16%">% / Fixed</th>
+                                                                <th width="16%">Date Range</th>
+                                                                <th width="16%">Auto / Coupon</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr class="div_border">
+                                                                <td class="text-center">X</td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                            </tr>
+                                                            <tr class="div_border">
+                                                                <td class="text-center">X</td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-6 grid-content div_border">
+                                                <div class="small-11 grid-block p-m-top">
+                                                    <div class="small-8 grid-block wrap p-top align-left">
+                                                        <div class="small-12 grid-content m-left">
+                                                            <span class="m-left">Per Family Discount Settings</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-4 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <a class="tiny button full" zf-open="modal_family_discount">Add New</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="small-12 grid-block align-center">
+                                                    <div class="small-12 grid-content p-m-bottom">
+                                                        <table class="txt_content div_border">
+                                                            <thead>
+                                                                <tr class="text-center">
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="div_border">
+                                                                    <td class="text-center">1</td>
+                                                                    <td class="text-center">10</td>
+                                                                    <td class="text-center">Percent</td>
+                                                                </tr>
+                                                                <tr class="div_border">
+                                                                    <td class="text-center">2</td>
+                                                                    <td class="text-center">15</td>
+                                                                    <td class="text-center">Percent</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-content div_border">
+                                                <div class="small-11 grid-block p-m-top">
+                                                    <div class="small-5 grid-block wrap p-top align-left">
+                                                        <div class="small-12 grid-content m-left">
+                                                            <span class="m-left">Members Requesting Financial Aid</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-2 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <input type="radio" class="radio">
+                                                            <span class="txt-head">Active</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-2 grid-block wrap align-right">
+                                                        <div class="small-10 grid-content">
+                                                            <input type="radio" class="radio">
+                                                            <span class="txt-head">All</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="small-12 grid-block align-center p-top">
+                                                    <div class="small-12 grid-content p-m-bottom">
+                                                        <table class="txt_content div_border">
+                                                            <thead>
+                                                            <tr class="text-center">
+                                                                <th width="36%">Name</th>
+                                                                <th width="16%">Request Date</th>
+                                                                <th width="16%">Amount able to Pay</th>
+                                                                <th width="16%">Aid Issued</th>
+                                                                <th width="16%">Date Range</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr class="div_border">
+                                                                <td class="text-center">X</td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                            </tr>
+                                                            <tr class="div_border">
+                                                                <td class="text-center">X</td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                                <td class="text-center"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab m-width" zf-tab="" title="Status">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-8 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <div class="small-12 div_border">
+                                                        <div class="smal-12 grid-block">
+                                                            <div class="small-7 grid-block wrap">
+                                                                <div class="small-12 grid-content p-m-top">
+                                                                    <div class="grid-content">
+                                                                    Statement #1234 - Margie Smith
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="small-4 grid-block wrap">
+                                                                <div class="small1-12 grid-content p-m-top">
+                                                                    <div class="grid-content">
+                                                                        Balance : 75$
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block p-top m-left">
+                                                            <div class="small-12 grid-content">
+                                                                <span class="txt-head">Session : Fall 2015</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block p-top m-left">
+                                                            <div class="small-12 grid-content">
+                                                                <span class="txt-head"> 8/1/2015 - 31/12/2015</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block align-right p-top p-m-bottom">
+                                                            <div class="small-3 grid-content">
+                                                                <a class="tiny button full">Print</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-4 grid-block wrap">
+                                                <div class="small-12 grid-content m-left">
+                                                    <div class="grid-content div_border p-m-top">
+                                                        <div class="small-12 grid-block">
+                                                            Status: Unpaid
+                                                        </div>
+                                                        <div class="small-12 grid-block p-m-top p-m-bottom">
+                                                            <div class="small-5 grid-block wrap align-center">
+                                                                <div class="small-11 grid-content">
+                                                                    <a class="tiny button full">Refund</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="small-5 grid-block wrap align-center">
+                                                                <div class="small-11 grid-content">
+                                                                    <a class="tiny button full">Credit</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="small-5 grid-block wrap align-center">
+                                                                <div class="small-11 grid-content">
+                                                                    <a class="tiny button full">Payment</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-m-top">
+                                            <div class="small-8 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    Fees
+                                                </div>
+                                            </div>
+                                            <div class="small-4 grid-block wrap">
+                                                <div class="small-12 grid-content m-left">
+                                                    Total Fees
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-8 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <div class="small-12 div_border">
+                                                        <div class="small-12 p-top">
+                                                            <div class="small-12 grid-content p-m-bottom">
+                                                                <table class="txt_content div_border">
+                                                                    <thead>
+                                                                        <tr class="text-center">
+                                                                            <th width="30%">Description</th>
+                                                                            <th width="20%">Class Summary</th>
+                                                                            <th width="14%">Quantity</th>
+                                                                            <th width="12%">Amount</th>
+                                                                            <th width="12%">Total</th>
+                                                                            <th width="12%">Paid</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="div_border">
+                                                                            <td class="text-center">Hack Studio Tuition-Samson</td>
+                                                                            <td class="text-center">MW 4:00 pm</td>
+                                                                            <td class="text-center">20</td>
+                                                                            <td class="text-center">$25</td>
+                                                                            <td class="text-center">$500</td>
+                                                                            <td class="text-center">$425</td>
+                                                                        </tr>
+                                                                        <tr class="div_border">
+                                                                            <td class="text-center">&nbsp;</td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                        </tr>
+                                                                        <tr class="div_border">
+                                                                            <td class="text-center">&nbsp;</td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-4 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <div class="small-12 div_border m-left">
+                                                        <div class="small-12 grid-block">
+                                                            <div class="small-12 grid-content p-top">
+                                                                Type - Subtotal
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block m-left p-top">
+                                                            <div class="small-12 grid-content">
+                                                                <span class="txt-head">Tuition - Samson</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block m-left p-top p-m-bottom">
+                                                            <div class="small-12 grid-content">
+                                                                <span class="txt-head">$500</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-m-top">
+                                            <div class="small-8 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    Notes
+                                                </div>
+                                            </div>
+                                            <div class="small-4 grid-block wrap">
+                                                <div class="small-12 grid-content m-left">
+                                                    Payments
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-8 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <div class="small-12 div_border">
+                                                        <div class="small-12 p-top">
+                                                            <div class="small-12 grid-content p-m-bottom">
+                                                                <table class="txt_content div_border">
+                                                                    <thead>
+                                                                        <tr class="text-center">
+                                                                            <th width="60%">Notes</th>
+                                                                            <th width="20%">Recorded By</th>
+                                                                            <th width="20%">Date</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="div_border">
+                                                                            <td class="text-center">Mom will pay rest at end of December</td>
+                                                                            <td class="text-center">Mie</td>
+                                                                            <td class="text-center">8/12/2015</td>
+                                                                        </tr>
+                                                                        <tr class="div_border">
+                                                                            <td class="text-center">&nbsp;</td>
+                                                                            <td class="text-center"></td>
+                                                                            <td class="text-center"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-4 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <div class="small-12 div_border m-left">
+                                                        <div class="small-12 grid-block">
+                                                            <div class="small-7 grid-block wrap">
+                                                                <div class="small-12 grid-content">
+                                                                    <div class="grid-content p-top">
+                                                                        Transaction
+                                                                    </div>
+                                                                </div>
+                                                                <div class="small-12 grid-content">
+                                                                    <div class="grid-content p-top m-left">
+                                                                        <span class="txt-head">425$</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="small-6 grid-block wrap">
+                                                                <div class="small-12 grid-content">
+                                                                    <div class="grid-content p-top m-left">
+                                                                        Date
+                                                                    </div>
+                                                                </div>
+                                                                <div class="small-12 grid-content">
+                                                                    <div class="grid-content p-top m-left">
+                                                                        <span class="txt-head">15/8/2015</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="small-12 grid-block align-right p-m-top p-m-bottom">
+                                                            <div class="small-6 grid-content">
+                                                                <span class="">Total : $425</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div zf-modal="" id="modal_set_discount">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Set Discount</h6>
+            <hr>
+            <div class="row" ng-include="'templates/billing/modal_set_discount.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_family_discount">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Set Family Discount</h6>
+            <hr>
+            <div class="row" ng-include="'templates/billing/modal_family_discount.html'">
+            </div>
+        </div>
+    </div>
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/footer.html'">
+            </div>
+        </div>
+    </div>
+</div>

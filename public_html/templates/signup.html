@@ -1,0 +1,52 @@
+<div id="signup">
+	<div class="small-7 grid-block small-offset-3">
+		<div class="small-11 grid-content text-center noscroll">
+			<div class="upart">
+				<h3>Register to 'Hackstudio'</h3>
+				<h4>Crate a new account</h4>
+				<form id="signupForm" name="signupForm" novalidate>
+					<label class="grid-content text-left noscroll">
+						<span class="bold">Name</span>
+						<input type="text" name="fullname" placeholder="FullName" ng-model="fullname" required/>
+						<span style="color:red" ng-show="signupForm.fullname.$dirty && signupForm.fullname.$invalid">
+						<span ng-show="signupForm.fullname.$error.required">Name is required</span></span>
+					</label>
+					<label class="grid-content text-left noscroll">
+						<span class="bold">Email</span>
+						<input type="email" name="email_address" placeholder="E-Mail" ng-model="email_address" required/>
+						<span style="color:red" ng-show="signupForm.email_address.$dirty && signupForm.email_address.$invalid">Email is required!</span>
+						<span style="color:red" ng-show="signupForm.email_address.$error.email">Invalid email address.</span>
+					</label>
+					<label class="grid-content text-left noscroll">
+						<span class="bold">Password</span>
+						<input type="password" name="password" placeholder="Password" ng-model="password" ng-enter="signup()" required/>
+						<span style="color:red" ng-show="signupForm.password.$dirty && signupForm.password.$invalid">
+						<span ng-show="signupForm.password.$error.required">Password is required</span></span>
+						By registering I agree to Hackstudio software's <a>Terms of Service</a> and <a>Privacy Policy</a>
+					</label>
+					<label class="grid-content text-right small-offset-9">
+						<a class="expand button" ng-click="signup()" ng-disabled="signupForm.password.$dirty && signupForm.password.$invalid ||
+					signupForm.email_address.$dirty && signupForm.email_address.$invalid">Sign Up</a>
+					</label>
+					<hr>
+					<label class="grid-content text-left already_signin">
+						<a ui-sref="/login">Already signed up? Log in</a>
+					</label>
+				</form>
+			</div>
+			<div class="lpart">
+					<label class="grid-content text-left">
+						<h4>Or Sign up with:</h4>
+					</label>
+			</div>
+			<div class="lpart grid-content">
+				<div class="grid-block small-8">
+					<a class="expand small-3 cbutton" ng-click="signup()" ng-disabled="loginForm.$invalid">
+						<img src="../images/icons/google.png" alt="Signup with Google" /></a>
+					<a class="expand small-3 cbutton" ng-click="signup()" ng-disabled="loginForm.$invalid">
+						<img src="../images/icons/yahoo.png" alt="Signup with Yahoo" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

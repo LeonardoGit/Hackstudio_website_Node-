@@ -1,0 +1,136 @@
+<div id="members">
+    <div class="row">
+        <div class="small-12 grid-block">
+            <div class="small-12 grid-block">
+                <div class="grid-block" ng-include="'templates/members/header.html'">
+                </div>
+            </div>
+        </div>
+        <div class="small-12 grid-block">
+            <div class="small-2 grid-block wrap menu_part">
+                <div class="small-12 grid-content">
+                    <div class="row" ng-include="'templates/calendar/left_menu.html'">
+                    </div>
+                </div>
+            </div>
+            <div class="small-8 grid-block wrap">
+                <div class="row small-12 p-m-top">
+                    <div class="small-3 grid-block small-offset-9">
+                        <div class="small-10 grid-content">
+                            <input class="ico_search" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="small-12 grid-block p-top">
+                        <div class="small-2 small-offset-5 grid-content">
+                            <span class=""><- Month -></span>
+                        </div>
+                    </div>
+                    <div class="small-12 grid-block p-m-top">
+                        <div class="small-12 grid-content">
+                            <table class="txt_content div_border">
+                                <thead>
+                                <tr class="text-center" height="40px">
+                                    <th width="20%" >Monday</th>
+                                    <th width="20%">Tuesday</th>
+                                    <th width="20%">Wednesday</th>
+                                    <th width="20%">Thursday</th>
+                                    <th width="20%">Friday</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="div_border" height="50px">
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                </tr>
+                                <tr class="div_border" height="50px">
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                </tr>
+                                <tr class="div_border" height="50px">
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                    <td class="text-center">6:00 pm <br> 7:30</td>
+                                </tr>
+                                <tr class="div_border" height="50px">
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                    <td class="text-center">&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="small-2 grid-block wrap">
+                <div class="row small-12">
+                    <div class=" grid-content p-l-top">
+                        <div class="small-12">
+                            <a class="small button full" zf-open="modal_set_fee" ng-controller="CalendarCtrl">Set Fiscal Year & Fee</a>
+                        </div>
+                    </div>
+                    <div class=" grid-content p-m-top">
+                        <div class="small-12">
+                            <a class="small button full" zf-open="modal_create_term" ng-controller="CalendarCtrl">Create Term</a>
+                        </div>
+                    </div>
+                    <div class=" grid-content p-m-top">
+                        <div class="small-12">
+                            <a class="small button full" zf-open="modal_add_holiday" ng-controller="CalendarCtrl">Add Holiday</a>
+                        </div>
+                    </div>
+                    <div class=" grid-content p-m-top">
+                        <div class="small-12">
+                            <a class="small button full" zf-open="modal_add_session" ng-controller="CalendarCtrl">Add Session</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div zf-modal="" id="modal_set_fee">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Set Fiscal Year & Fee</h6>
+            <hr>
+            <div class="row" ng-include="'templates/calendar/modal_set_fee.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_create_term">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Create Team</h6>
+            <hr>
+            <div class="row" ng-include="'templates/calendar/modal_create_term.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_add_holiday">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Add Holiday</h6>
+            <hr>
+            <div class="row" ng-include="'templates/calendar/modal_add_holiday.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_add_session">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Add/Edit Session</h6>
+            <hr>
+            <div class="row" ng-include="'templates/calendar/modal_add_session.html'">
+            </div>
+        </div>
+        <div class="small-12 grid-block">
+            <div class="small-12 grid-block">
+                <div class="grid-block" ng-include="'templates/members/footer.html'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,597 @@
+<div id="members">
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/header.html'">
+            </div>
+        </div>
+    </div>
+    <div class="row grid-block p-top">
+        <div class="small-12 grid-block">
+            <div class="small-2 grid-block wrap menu_part">
+                <div class="small-12 grid-content">
+                    <div class="row" ng-include="'templates/members/left_menu.html'">
+                    </div>
+                </div>
+            </div>
+            <div class="small-10 grid-block wrap">
+                <div class="row">
+                    <div class="small-3 grid-block small-offset-9">
+                        <div class="small-10 grid-content">
+                            <input class="ico_search" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="small-12 grid-block p-top">
+                        <div class="grid-content">
+                            <div zf-tabs="" class="">
+                                <div class="tab s-width" zf-tab="" title="Parent">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-9 grid-block wrap">
+                                                <div class=" grid-content">
+                                                    <div class="div_border">
+                                                        <table>
+                                                            <thead>
+                                                            <tr class="txt-content">
+                                                                <th width="35%">BILLING CONTACT</th>
+                                                                <th width="25%">FAMILIY ID</th>
+                                                                <th width="40%">CURRENT STATEMENT BALLENCE</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td class="text-center">{{ $parent.pInfo.first_name +" "+$parent.pInfo.last_name }}</td>
+                                                                <td class="text-center">No.{{ $parent.pInfo.id }}</td>
+                                                                <td class="text-center">$50</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 small-3 grid-block wrap m-left p-top">
+                                                <div class=" grid-content">
+                                                    <a class="small button" href="#">Password Reset</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-4 grid-block wrap parent_left">
+                                                <div class="small-12 grid-content">
+                                                    <ul class="pricing-table" ng-model="pInfo">
+                                                        <li class="t_right">
+                                                            <div class="small-12 grid-block">
+                                                                <div class="small-10 wrap">
+                                                                    <div class="small-11">
+                                                                        PRYMARY CONTACT
+                                                                    </div>
+                                                                </div>
+                                                                <div class="small-2 wrap">
+                                                                    <div class="small-12">
+                                                                        <a class="tiny button m-top" zf-open="modal_edit_pinfo">Edit</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="txt_content">{{ $parent.pInfo.first_name +" "+$parent.pInfo.last_name }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.phone_number1 }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.phone_number2 }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.addy1 }}&nbsp;{{ $parent.pInfo.addy2 + " " + $parent.pInfo.city + " " + $parent.pInfo.state + " " + $parent.pInfo.zip}}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.facebook }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.twitter }}</li>
+                                                        <li class="txt_content"><span>{{ $parent.pInfo.referal_type }}</span></li>
+                                                        <li class="txt_content"><hr></li>
+                                                        <li class="txt_content">{{ $parent.pInfo.physician_name }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.physician_phone }}</li>
+                                                        <li class="txt_content">{{ $parent.pInfo.emergency_contact1 +" "+$parent.pInfo.emergency_contact2 }}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="small-3 grid-block wrap parent_middle">
+                                                <div class="row small-12">
+                                                    <div class="small-12 grid-content">
+                                                        <div class="div_border">
+                                                            <li class="t_center">MEMBERS CURRENT <br>ENROLLMENT</li>
+                                                            <table class="txt_content">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th width="25%"></th>
+                                                                    <th width="25%"></th>
+                                                                    <th width="50%"></th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">Peter</td>
+                                                                    <td class="text-center">Fall 15</td>
+                                                                    <td class="text-center">M/W 4:00 PM</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">Peter</td>
+                                                                    <td class="text-center">Fall 15</td>
+                                                                    <td class="text-center">M/W 4:00 PM</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 grid-content p-top text-center">
+                                                        <a class="small button" zf-open="modal_new_enroll">ENROLL IN NEW CLASS</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-5 grid-block wrap parent_right">
+                                                <div class="row small-12">
+                                                    <div class="small-12 grid-content">
+                                                        <div class="small-12 div_border text-center">
+                                                            <li class="t_center">BILLING HISTORY</li>
+                                                            <table class="billing_history div_border txt_content">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th width="15%">Date</th>
+                                                                    <th width="40%">Payment Amt</th>
+                                                                    <th width="40%">Payment Type</th>
+                                                                    <th width="25%">Balance</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">11/11/15</td>
+                                                                    <td class="text-center">$200</td>
+                                                                    <td class="text-center">cc</td>
+                                                                    <td class="text-center">$100</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="small-12 p-top">
+                                                                <a class="small button " href="#">VIEW STATEMENT/MAKE PAYMENT</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 grid-content p-top">
+                                                        <ul class="pricing-table">
+                                                            <li class="t_right">
+                                                                <div class="small-12 grid-block">
+                                                                    <div class="small-10 wrap">
+                                                                        <div class="small-10">
+                                                                            CC INFORMATION
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="small-2 wrap">
+                                                                        <div class="small-12">
+                                                                            <a class="tiny button m-top">Edit</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="txt_content"><hr></li>
+                                                            <li class="txt_content">Credit Card ##: ******1234</li>
+                                                            <li class="txt_content">Exp Date</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-block">
+                                                <div class="small-12 grid-content">
+                                                    <span class="txt-head">CONTACT LOG</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="grid-content div_border text-right">
+                                                <div>
+                                                    <table class="billing_history div_border txt_content">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="200">DATE</th>
+                                                                <th width="800">NOTE</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center">11/11/15</td>
+                                                                <td class="text-center">Mom called to say Billy shouldn't home with Mickey</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="small-12 p-top">
+                                                        <a class="small button but_bill" data-ng-click="add_new_note()">ADD NEW</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab s-width" zf-tab="" title="Students">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-10 grid-block wrap">
+                                                <div class="small-12 grid-content">
+                                                    <table class="div_border">
+                                                        <thead>
+                                                            <tr>
+                                                                <th width="200"></th>
+                                                                <th width="200"></th>
+                                                                <th width="200"></th>
+                                                                <th width="100"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center">{{ $parent.studentInfo.first_name + ' '+ $parent.studentInfo.last_name}}</td>
+                                                                <td class="text-center">{{ $parent.studentInfo.grade}}</td>
+                                                                <td class="text-center">ENROLLMENT STATUS</td>
+                                                                <td class="text-center"><div class="height-s"><a class="small button m-p-top" href="#">HSR</a></div></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="small-12 grid-block p-top">
+                                                    <div class="small-7 grid-content wrap parent_left">
+                                                        <div class="small-12 grid-content">
+                                                            <ul class="pricing-table">
+                                                                <li class="t_right">
+                                                                    <div class="small-12 grid-block">
+                                                                        <div class="small-10 wrap">
+                                                                            <div class="small-11">
+                                                                                STUDENT DEMOGRAPHIC INFOMATION
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="small-2 wrap">
+                                                                            <div class="small-12">
+                                                                                <a class="tiny button m-top" zf-open="modal_edit_studentInfo">Edit</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="txt_content"><hr></li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.first_name + ' '+ $parent.studentInfo.last_name }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.gender }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.school + ' ' + $parent.studentInfo.grade }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.dob }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.hack_universary}}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.email_address}}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.phone1 + ',' + $parent.studentInfo.phone2 }}</li>
+                                                                <li class="txt_content">{{ $parent.pInfo.physician_name }}</li>
+                                                                <li class="txt_content">{{ $parent.pInfo.physician_phone }}</li>
+                                                                <li class="txt_content">{{ $parent.pInfo.emergency_contact1 }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.allergies }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.medication + ' ' + $parent.studentInfo.reason_medication }}</li>
+                                                                <li class="txt_content">{{ $parent.studentInfo.other_info }}</li>
+
+                                                                <div class="small-12 grid-block">
+                                                                    <div class="small-5 small-offset-2 wrap">
+                                                                        <div class="small-12  grid-block">
+                                                                            <div class="gride-content txt-head">
+                                                                                <a>Student Profile page</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="small-5  grid-block wrap">
+                                                                        <div class="small-12 ">
+                                                                            <div class="gride-content txt-head">
+                                                                                <a>Medical Emergency Page</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-5 grid-block wrap parent_middle">
+                                                        <div class="row">
+                                                            <div class="small-12 grid-block">
+                                                                <div class="grid-content">
+                                                                    <div class="div_border txt-head">
+                                                                        <li class="t_center">SESSION HISTORY</li>
+                                                                        <div class="small-12 grid-block p-top">
+                                                                            <div class="small-5 small-offset-2 wrap">
+                                                                                <div class="small-12  grid-block">
+                                                                                    <div class="gride-content text-center">
+                                                                                        <span class="">SESSION</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="small-5  grid-block wrap">
+                                                                                <div class="small-12 ">
+                                                                                    <div class="gride-content text-center">
+                                                                                        <span class="m-left">MENTOR</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <table class="txt_content">
+                                                                            <span class="left m-left">FALL 2015</span>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th width="115"></th>
+                                                                                <th width="200"></th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center">T 4:00</td>
+                                                                                <td class="text-center">SALLY SMITH</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="text-center">TH 2:15</td>
+                                                                                <td class="text-center">TOM PETERSON</td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                        <table class="txt_content">
+                                                                            <span class="left m-left">SPRING 2015</span>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th width="115"></th>
+                                                                                <th width="200"></th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center">W 4:15</td>
+                                                                                <td class="text-center">JUDE MICHAELS</td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="small-12 grid-content text-left m-left p-m-top">
+                                                                <a class="small button" zf-open="modal_new_enroll">ENROLL IN NEW CLASS</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 m-left wrap">
+                                                <div class="row">
+                                                    <div class="small-12 gride-block">
+                                                        <div class="gride-content">
+                                                            <a class="th" href="#">
+                                                                <img class="user_img_panel" src="images/user-image.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 gride-block">
+                                                        <div class="gride-content text-right m-p-top">
+                                                            <a class="small button">UPLOAD PIC</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 gride-block p-m-top">
+                                                        <div class="gride-content text-right">
+                                                            <a class="small button full" zf-open="modal_assign_scholarship">Assign Scholarship</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-block">
+                                                <div class="small-12 grid-content">
+                                                    <span class="txt-head">CONTACT LOG</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="grid-content div_border text-right">
+                                                <div>
+                                                    <table class="billing_history div_border txt_content">
+                                                        <thead>
+                                                        <tr>
+                                                            <th width="200">DATE</th>
+                                                            <th width="800">NOTE</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="text-center">11/11/15</td>
+                                                            <td class="text-center">Mom called to say Billy shouldn't home with Mickey</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="small-12 p-top">
+                                                        <a class="small button but_bill" zf-open="modal_add_note">ADD NEW</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="tab s-width" zf-tab="" title="Scholarship Name">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-10 grid-block wrap">
+                                                <div class="grid-content">
+                                                    <table class="div_border txt-head height-s">
+                                                        <thead>
+                                                        <tr>
+                                                            <th width="30%"></th>
+                                                            <th width="30%"></th>
+                                                            <th width="40%"></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="text-center">{{ $parent.scholarshipInfo.name }}</td>
+                                                            <td class="text-center">{{ $parent.scholarshipInfo.id }}</td>
+                                                            <td class="text-center">CURRENT STATEMENT BALANCE</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-7 grid-block wrap">
+                                                <div class="small-12 grid-block">
+                                                    <div class="small-6 grid-content wrap">
+                                                        <div class="small-12 grid-content">
+                                                            <ul class="pricing-table">
+                                                                <li class="t_right">
+                                                                    <div class="small-12 grid-block">
+                                                                        <div class="small-10 wrap">
+                                                                            <div class="small-10">
+                                                                                CONTACT INFO
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="small-2 wrap">
+                                                                            <div class="small-12">
+                                                                                <a class="tiny button m-top" zf-open="modal_add_scholarship">Edit</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.name }}</li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.phone1 }}</li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.email_address }}</li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.addy1 + "," + $parent.scholarshipInfo.addy2+ "," +$parent.scholarshipInfo.city + "," +$parent.scholarshipInfo.state + "," +$parent.scholarshipInfo.zip }}</li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.twitter }}</li>
+                                                                <li class="txt_content">{{ $parent.scholarshipInfo.facebook }}</li>
+                                                                <li class="txt_content">{{ $parent.pInfo.referal_type }}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-6 grid-block wrap">
+                                                        <div class="small-12">
+                                                            <ul class="pricing-table">
+                                                                <li class="t_center">CURRENT MEMBERS AND ENROLLMENTS</li>
+                                                                <li class="txt_content">JONNY FALL 15</li>
+                                                                <li class="txt_content">SARAH FALL 15</li>
+                                                                <li class="txt_content">RALPH --</li>
+                                                                <li class="txt_content">MICHAH --</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-5 grid-block wrap">
+                                                <div class="row small-12">
+                                                    <div class="small-12 grid-content">
+                                                        <div class="div_border text-center">
+                                                            <li class="t_center">BILLING HISTORY</li>
+                                                            <table class="billing_history div_border txt_content">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th width="15%">Date</th>
+                                                                    <th width="40%">Payment Amt</th>
+                                                                    <th width="40%">Payment Type</th>
+                                                                    <th width="25%">Balance</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">11/11/15</td>
+                                                                    <td class="text-center">$200</td>
+                                                                    <td class="text-center">cc</td>
+                                                                    <td class="text-center">$100</td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="small-12 p-top">
+                                                                <a class="small button " href="#">VIEW STATEMENT/MAKE PAYMENT</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 grid-content p-top">
+                                                        <ul class="pricing-table">
+                                                            <li class="t_right">
+                                                                <div class="small-12 grid-block">
+                                                                    <div class="small-10 wrap">
+                                                                        <div class="small-10">
+                                                                            CC INFORMATION
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="small-2 wrap">
+                                                                        <div class="small-12">
+                                                                            <a class="tiny button m-top">Edit</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="txt_content"><hr></li>
+                                                            <li class="txt_content">Credit Card ##: ******1234</li>
+                                                            <li class="txt_content">Exp Date</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab s-width" zf-tab="" id="add_member" title="Add Member+">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div zf-modal="" id="modal_edit_pinfo">
+            <a zf-close="" class="close-button">×</a>
+                <h6>Edit parent infomation</h6>
+                <hr>
+            <div class="row" ng-include="'templates/members/modal_parent_info.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_edit_studentInfo">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Edit Student Infomation</h6>
+            <hr>
+            <div class="row" ng-include="'templates/members/modal_student_info.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_assign_scholarship">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Assign Scholarship</h6>
+            <hr>
+            <div class="row" ng-include="'templates/members/modal_assign_scholarship.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_add_note">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Add / Edit  Note</h6>
+            <hr>
+            <div class="row" ng-include="'templates/members/modal_add_note.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_add_scholarship">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Add / Edit  Note</h6>
+            <hr>
+            <div class="row" ng-include="'templates/members/modal_add_scholarship.html'">
+            </div>
+        </div>
+        <div zf-modal="" id="modal_new_enroll">
+            <a zf-close="" class="close-button">×</a>
+            <h6>New Class Signup</h6>
+            <hr>
+            <h4>Session Sign-up</h4>
+            <div zf-tabs="">
+                <div class="tab enrol_tab" zf-tab="" title="Mike">
+                </div>
+                <div class="tab enrol_tab" zf-tab="" title="Jake">
+                </div>
+                <div class="tab enrol_tab" zf-tab="" title="David">
+                </div>
+                <div class="tab enrol_tab" zf-tab="" title="Add+">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/footer.html'">
+            </div>
+        </div>
+    </div>
+</div>

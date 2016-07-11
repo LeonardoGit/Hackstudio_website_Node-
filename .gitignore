@@ -1,0 +1,10 @@
+.sass-cache
+bower_components
+node_modules
+js/
+public_html/stylesheets/style.css
+public_html/stylesheets/style.css.map
+bower_components
+public_html/js/
+.idea/
+*.html~

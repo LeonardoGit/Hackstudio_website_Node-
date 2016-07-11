@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "authors": [
+    "Casey Morford <casey@reflectivegroup.com>"
+  ],
+  "description": "Hackstudio Backend",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "Private/Proprietary",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.1.0"
+  }
+}

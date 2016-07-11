@@ -1,0 +1,84 @@
+<div class="small-12 grid-block">
+	<div class="small-4 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Discount Name</span>
+		</div>
+	</div>
+	<div class="small-8 grid-block wrap">
+		<div class="small-9 grid-content">
+			<input name="search" placeholder="" ng-model="">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-4 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Discount Amount</span>
+		</div>
+	</div>
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="staffInfo.dob">
+		</div>
+	</div>
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="staffInfo.dob">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-4 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Discount Code</span>
+		</div>
+	</div>
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="staffInfo.dob">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-4 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Date Range</span>
+		</div>
+	</div>
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="staffInfo.dob">
+		</div>
+	</div>
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="staffInfo.dob">
+		</div>
+	</div>
+</div>
+<div class="small-12 gird-block p-top">
+	<div class="small-7 grid-block">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Apply to members with following tags:</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 gird-block p-top">
+	<div class="small-12 grid-block">
+		<div class="small-12 grid-content">
+			<textarea class="txt-head" data-ng-model="staffInfo.other_info"></textarea>
+		</div>
+	</div>
+</div>
+<div data-alert class="alert-box {{errpInfo.type}} radius" ng-show=" errpInfo.hasError">
+	{{ errpInfo.message }}
+	<a href="#" class="close">&times;</a>
+</div>
+
+<div class="small-12 gird-block p-top">
+	<div class="small-12 grid-block wrap">
+		<div class="small-12 text-right grid-content">
+			<a class="tiny button" ng-click="edit_staff_info()">Set Discount</a>
+		</div>
+	</div>
+</div>

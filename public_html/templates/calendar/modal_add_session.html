@@ -1,0 +1,155 @@
+<div class="small-12 grid-block">
+	<div class="small-12 grid block">
+		<div class="small-5 grid-content">
+			<span class="txt-head">Name of Term</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block">
+	<div class="small-12 grid block">
+		<div class="small-5 grid-content">
+			<select class="txt-head">
+				<option ng-repeat="value in termDatas" value=" value.id ">{{ value.name }}</option>
+			</select>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block">
+	<div class="small-12 grid block">
+		<div class="small-5 grid-content">
+			<span class="txt-head">Session Name</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block">
+	<div class="small-10 grid block">
+		<div class="small-5 grid-content">
+			<input name="search" placeholder="">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="text" id="datepicker" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="start_date">
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="text" class="datepicker" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="end_date">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-2 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="checkbox" class="radio" value="Male">
+			<span class="txt-head">Mon</span>
+		</div>
+	</div>
+	<div class="small-2 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="checkbox" class="radio" value="Male">
+			<span class="txt-head">Tue</span>
+		</div>
+	</div>
+	<div class="small-2 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="checkbox" class="radio" value="Male">
+			<span class="txt-head">Wed</span>
+		</div>
+	</div>
+	<div class="small-2 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="checkbox" class="radio" value="Male">
+			<span class="txt-head">Thu</span>
+		</div>
+	</div>
+	<div class="small-2 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input type="checkbox" class="radio" value="Male">
+			<span class="txt-head">Fri</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Start Time</span>
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">End Time</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="date">
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="date">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Program</span>
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head"># Of slots available</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<select class="txt-head">
+				<option value="0">Core</option>
+				<option value="0">HS</option>
+				<option value="0">Adult</option>
+			</select>
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap p-top">
+		<div class="small-12 grid-content">
+			<input class="">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-12 grid-block">
+		<div class="small-5 small-offset-5">
+			<div class="grid-content">
+				Rate per hour
+			</div>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-12 grid-block">
+		<div class="small-5 small-offset-5">
+			<div class="grid-content">
+				<input class="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-m-top">
+	<div class="small-12 grid-block">
+		<div class="small-3 small-offset-8">
+			<div class="grid-content">
+				<div class="small-12">
+					<a class="tiny button full" ng-click="add_session()">See Summary</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

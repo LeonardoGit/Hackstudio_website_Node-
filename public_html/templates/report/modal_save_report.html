@@ -1,0 +1,41 @@
+<div class="small-12 grid-block">
+	<div class="small-8 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Report Name</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-8 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="name" ng-model="staffInfo.dob">
+		</div>
+	</div>
+</div>
+
+<div class="small-12 gird-block p-top">
+	<div class="small-8 grid-block">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Other Info</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 gird-block p-top">
+	<div class="small-12 grid-block">
+		<div class="small-12 grid-content">
+			<textarea class="txt-head" data-ng-model="staffInfo.other_info"></textarea>
+		</div>
+	</div>
+</div>
+<div data-alert class="alert-box {{errpInfo.type}} radius" ng-show=" errpInfo.hasError">
+	{{ errpInfo.message }}
+	<a href="#" class="close">&times;</a>
+</div>
+
+<div class="small-12 gird-block p-top">
+	<div class="small-12 grid-block wrap">
+		<div class="small-12 text-right grid-content">
+			<a class="tiny button" ng-click="edit_staff_info()">Save</a>
+		</div>
+	</div>
+</div>

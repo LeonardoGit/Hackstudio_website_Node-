@@ -1,0 +1,49 @@
+<div class="small-12 grid-block">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Start</span>
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">End</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="datepicker1" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="yearFee.start_date">
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="datepicker2" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="yearFee.end_date">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-3 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Annual Fee</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input name="search" placeholder="" ng-model="yearFee.annual_fee">
+		</div>
+	</div>
+	<div class="small-5 small-offset-1 grid-block wrap">
+		<div class="small-12 grid-content">
+			<div class="small-12">
+				<a class="tiny button full" ng-click="set_year_fee()">set</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-alert class="grid-content alert-box {{errpInfo.type}} radius" ng-show=" errpInfo.hasError">
+	{{ errpInfo.message }}
+	<a href="#" class="close">&times;</a>
+</div>

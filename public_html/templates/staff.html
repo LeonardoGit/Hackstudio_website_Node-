@@ -1,0 +1,196 @@
+<div id="members">
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/header.html'">
+            </div>
+        </div>
+    </div>
+    <div class="row grid-block p-top">
+        <div class="small-12 grid-block">
+            <div class="small-2 grid-block wrap menu_part">
+                <div class="small-12 grid-content">
+                    <div class="row" ng-include="'templates/staff/left_menu.html'">
+                    </div>
+                </div>
+            </div>
+            <div class="small-10 grid-block wrap">
+                <div class="row small-12">
+                    <div class="small-3 grid-block small-offset-9 p-top">
+                        <div class="small-10 grid-content">
+                            <input class="ico_search" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="small-12 grid-block p-top">
+                        <div class="grid-content">
+                            <div zf-tabs="" class="">
+                                <div class="tab m-width" zf-tab="" title="Information">
+                                    <div class="row">
+                                        <div class="small-12 grid-block">
+                                            <div class="small-10 grid-block wrap">
+                                                <div class="small-11 grid-content">
+                                                    <table class="div_border height-s">
+                                                        <thead>
+                                                        <tr>
+                                                            <th width="30%"></th>
+                                                            <th width="30%"></th>
+                                                            <th width="40%"></th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="text-center">{{ $parent.staffInfo.name }}</td>
+                                                            <td class="text-center">POSITION</td>
+                                                            <td class="text-center">TAGS</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="small-12 grid-block p-top">
+                                                    <div class="small-7 grid-content wrap parent_left">
+                                                        <div class="small-12 grid-content">
+                                                            <ul class="pricing-table">
+                                                                <li class="t_right">
+                                                                    <div class="small-12 grid-block">
+                                                                        <div class="small-10 wrap">
+                                                                            <div class="small-11">
+                                                                                STAFF DEMOGRAPHIC INFOMATION
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="small-2 wrap">
+                                                                            <div class="small-12">
+                                                                                <a class="tiny button m-top" zf-open="modal_staff_info">Edit</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.name }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.addy1 }}&nbsp;{{ $parent.staffInfo.addy2 + " " + $parent.staffInfo.city + " " + $parent.staffInfo.state + " " + $parent.staffInfo.zip}}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.dob }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.email_address }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.twitter }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.facebook }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.phone }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.emergency_name +","+ $parent.staffInfo.emergency_phone }}</li>
+                                                                <li class="txt_content">{{ $parent.staffInfo.other_info }}</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-5 grid-block wrap parent_middle">
+                                                        <div class="row">
+                                                            <div class="small-12 grid-block">
+                                                                <div class="grid-content">
+                                                                    <div class="div_border txt-head">
+                                                                        <li class="t_center">SESSION HISTORY</li>
+                                                                        <div class="small-12 grid-block p-top">
+                                                                            <div class="small-10 grid-content">
+                                                                                <div class="small-12 grid-content">
+                                                                                    <select class="txt-head">
+                                                                                        <option value="0">Fall 2015</option>
+                                                                                        <option value="1">Winter 2015</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <table class="txt_content">
+                                                                            <span class="left m-left">FALL 2015</span>
+                                                                            <thead>
+                                                                            <tr>
+                                                                                <th width="115"></th>
+                                                                                <th width="200"></th>
+                                                                            </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center">T 4:00</td>
+                                                                                <td class="text-center">SALLY SMITH</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="text-center">TH 2:15</td>
+                                                                                <td class="text-center">TOM PETERSON</td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="small-2 m-left wrap">
+                                                <div class="row">
+                                                    <div class="small-12 gride-block">
+                                                        <div class="gride-content">
+                                                            <a class="th" href="#">
+                                                                <img class="user_img_panel" src="images/user-image.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-12 gride-block">
+                                                        <div class="gride-content text-right p-m-top">
+                                                            <a class="small button">UPLOAD PIC</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-block">
+                                                <div class="grid-content">
+                                                    NOTES
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 grid-block p-top">
+                                            <div class="small-12 grid-block">
+                                                <div class="grid-content text-right">
+                                                    <table class="div_border txt_content">
+                                                        <thead>
+                                                        <tr>
+                                                            <th width="200">DATE</th>
+                                                            <th width="800">NOTE</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td class="text-center">11/11/15</td>
+                                                            <td class="text-center">Mom called to say Billy shouldn't home with Mickey</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="small-12 p-top">
+                                                        <a class="small button but_bill" zf-open="modal_add_note">ADD NEW</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="tab m-width" zf-tab="" title="Schedule">
+                                    <div class="row" ng-include="'templates/staff/tab_schedule.html'">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div zf-modal="" id="modal_staff_info">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Edit Info</h6>
+            <hr>
+            <div class="row" ng-include="'templates/staff/modal_staff_info.html'">
+            </div>
+        </div>
+    </div>
+    <div class="small-12 grid-block">
+        <div class="small-12 grid-block">
+            <div class="grid-block" ng-include="'templates/members/footer.html'">
+            </div>
+        </div>
+    </div>
+</div>

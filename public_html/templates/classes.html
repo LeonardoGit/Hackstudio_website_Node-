@@ -1,0 +1,70 @@
+<div id="members">
+    <div class="row">
+        <div class="small-12 grid-block">
+            <div class="small-12 grid-block">
+                <div class="grid-block" ng-include="'templates/members/header.html'">
+                </div>
+            </div>
+        </div>
+        <div class="small-12 grid-block">
+            <div class="small-2 grid-block wrap menu_part">
+                <div class="small-12 grid-content">
+                    <div class="row" ng-include="'templates/classes/left_menu.html'">
+                    </div>
+                </div>
+            </div>
+            <div class="small-10 grid-block wrap">
+                <div class="row small-12 p-m-top">
+                    <div class="small-3 grid-block ">
+                        <div class="small-10 grid-content">
+                            <select class="txt-head">
+                                <option value="0">Fall 2015</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="small-12 grid-block p-top">
+                        <div class="grid-content">
+                            <div zf-tabs="" class="">
+                                <div class="tab tab-class" zf-tab="" title="Mon-E">
+                                    <div class="row" ng-include="'templates/classes/tab_mon_e.html'">
+                                    </div>
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Tue-E">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Wed-E">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Thu-E">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Fri-E">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Mon-L">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Wed-L">
+                                </div>
+                                <div class="tab-class" zf-tab="" title="Master">
+                                    <div class="row" ng-include="'templates/classes/tab_master.html'">
+                                    </div>
+                                </div>
+                                <div class="tab tab-class" zf-tab="" title="Add +">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div zf-modal="" id="modal_staff_info">
+            <a zf-close="" class="close-button">×</a>
+            <h6>Edit parent infomation</h6>
+            <hr>
+            <div class="row" ng-include="'templates/staff/modal_staff_info.html'">
+            </div>
+        </div>
+        <div class="small-12 grid-block">
+            <div class="small-12 grid-block">
+                <div class="grid-block" ng-include="'templates/members/footer.html'">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

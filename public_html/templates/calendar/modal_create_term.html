@@ -1,0 +1,48 @@
+<div class="small-12 grid-block">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Name of Term</span>
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<span class="txt-head">Data Range</span>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="datepicker1" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="term.name">
+		</div>
+	</div>
+	<div class="small-5 grid-block wrap">
+		<div class="small-12 grid-content">
+			<input id="datepicker2" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="term.start_date">
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-12 grid-block wrap">
+		<div class="small-5 small-offset-5">
+			<div class="grid-content">
+				<input id="datepicker2" type="text" data-ng-datepicker data-ng-options="datepickerOptions" data-ng-model="term.end_date">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="small-12 grid-block p-top">
+	<div class="small-12 grid-block wrap">
+		<div class="small-5 small-offset-5">
+			<div class="grid-content">
+				<div class="small-12">
+					<a class="tiny button full" ng-click="create_term()">Create</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div data-alert class="alert-box {{errpInfo.type}} radius" ng-show=" errpInfo.hasError">
+	{{ errpInfo.message }}
+	<a href="#" class="close">&times;</a>
+</div>
